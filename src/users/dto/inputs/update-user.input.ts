@@ -8,11 +8,11 @@ export class UpdateUserInput {
   @IsString()
   uid: string;
 
-  @Field(() => Int, {nullable: true})
+  @Field(() => Int, { nullable: true })
   @IsOptional()
   age?: number;
 
-  @Field(() => Boolean, {nullable : true})
+  @Field(() => Boolean, { nullable: true })
   @IsBoolean()
   isSubscribed?: boolean;
 }

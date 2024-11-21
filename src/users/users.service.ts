@@ -26,6 +26,13 @@ export class UserService {
     return this.users.find((user) => user.uid == args.uid);
   }
 
+  getuserByEmail(email: string): User | null {
+    const user = this.users.find((user) => (user.email = email));
+    if (!user) return null;
+
+    return user;
+  }
+
   findAll(usersArgs: GetUsersArgs) {
     return usersArgs.uids.map((uid) => this.getUser({ uid }));
   }

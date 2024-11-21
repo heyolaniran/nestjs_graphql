@@ -8,6 +8,10 @@ export class CreateUserInput {
   @IsEmail()
   email: string;
 
+  @Field(() => String)
+  @IsNotEmpty()
+  password: string;
+
   @Field()
   @IsNotEmpty()
   @IsNumber()
